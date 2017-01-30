@@ -1,0 +1,2 @@
+# DCC-Cleric-Random-Spell-List-Generator-Designed-for-Pen-and-Paper-RPG
+A random cleric spell list generator designed for the Dungeon Crawl Classics pen and paper role-playing game.   The generator is deisgned using Javascript.  Under each spell is a manifestion, with are randomly generator (with the expection of those spell with a single manifestation).  Each spell has a page number corresponding to the page where the spell is listed in the DCC rulebook.  The generator displays the spells in numeric order based on the page number.
