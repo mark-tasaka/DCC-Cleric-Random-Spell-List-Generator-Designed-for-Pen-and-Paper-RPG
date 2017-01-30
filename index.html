@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>GitHub Dungeon Crawl Classics Cleric Spell List Generator</title>
+    
+	<meta charset="UTF-8">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="Mark Tasaka 2017">
+
+
+	<link rel="stylesheet" href="css/dcc_github.css"  />
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta charset="utf-8" />
+
+
+	</head>
+	
+	
+<body>
+
+
+	<section>
+		
+		<h1>Dungeon Crawl Classics Cleric Spell List Generator</h1>
+		
+		<p>Welcome to the Launch Page of the Dungeon Crawl Classics Cleric Spell List Generator.  The Cleric Spell List Generator is designed to generate a listing of Cleric Spell appropriate to the spell level selected.  For each spell a random spell manifestation is selected.  A page number, which makes reference to the page that the spell is found in the DCC rulebook, is listed beside each spell, and the spells are listed numeric order.</p>
+        
+		<p>For more information on the Dungeon Crawl Classics Game System, please visit:</p>
+		
+		<p><a href="http://goodman-games.com/" target="_blank" class="links">http://goodman-games.com/</a></p>
+		
+		<p>To see the generator used in the contents of the web, please visit:</p>
+		
+		<p><a href="http://www.oldschooladventures.org/dcc/cleric/" target="_blank" class="links">http://www.oldschooladventures.org/dcc/cleric/</a></p>
+		
+		
+		<h2>Cleric Character Generator</h2>
+    
+			
+				
+          
+                		<div class="content">
+		
+			<form id="cleric_spells_form" action="" target="_blank">
+			
+			  <select id="spell_level" class="dropdownmenu_cleric">
+				<option value="1" selected>Lv 1 Cleric</option>
+				<option value="2">Lv 2 Cleric</option>
+				<option value="3">Lv 3 Cleric</option>
+				<option value="4">Lv 4 Cleric</option>
+				<option value="5">Lv 5 Cleric</option>
+				<option value="6">Lv 6 Cleric</option>
+				<option value="7">Lv 7 Cleric</option>
+				<option value="8">Lv 8 Cleric</option>
+				<option value="9">Lv 9 Cleric</option>
+				<option value="10">Lv 10 Cleric</option>
+			  </select>
+			
+			  <select id="background_colour" class="dropdownmenu2">
+				<option value="1"  selected id="">Colour</option>
+				<option value="2" id="">Plain</option>
+			  </select>
+
+			
+			<div class="generatorb">
+
+				<input type="submit" value="Generate Spell List" id="generate_spells"/>
+				<input type="reset"  value="Reset" id="reset_spells"/>
+		
+				</div>
+			
+				</form>
+                </div>
+                
+
+    </section>
+
+
+	<script>
+        
+		document.getElementById("generate_spells").onclick = function() {
+			
+			var level = "1";
+			
+			if(document.getElementById("spell_level").value == 2) {
+				level = "2";
+			}
+			else if(document.getElementById("spell_level").value == 3) {
+				level = "3";
+			}
+			else if(document.getElementById("spell_level").value == 4) {
+				level = "4";
+			}
+			else if(document.getElementById("spell_level").value == 5) {
+				level = "5";
+			}
+			else if(document.getElementById("spell_level").value == 6) {
+				level = "6";
+			}
+			else if(document.getElementById("spell_level").value == 7) {
+				level = "7";
+			}
+			else if(document.getElementById("spell_level").value == 8) {
+				level = "8";
+			}
+			else if(document.getElementById("spell_level").value == 9) {
+				level = "9";
+			}
+			else if(document.getElementById("spell_level").value == 10) {
+				level = "10";
+			}
+			
+			var background = "1";
+			
+			if(document.getElementById("background_colour").value == 2) {
+				background = "2";
+			}
+			
+			document.getElementById("cleric_spells_form").action = "spells/dcc_cleric_spell_" + background + level + ".html";
+
+		}
+	
+	
+	
+	</script>
+        
+
+
+</body>
+    
+</html>

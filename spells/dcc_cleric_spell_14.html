@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dungeon Crawl Classics Level 4 Cleric Spell List Generator</title>
+    
+	<meta charset="UTF-8">
+	<meta name="description" content="Dungeon Crawl Classics cleric Character Generator. Goodman Games.">
+	<meta name="keywords" content="Dungeon Crawl Classics, Goodman Games,HTML5,CSS,JavaScript">
+	<meta name="author" content="Mark Tasaka 2016">
+	<link rel="stylesheet" type="text/css" href="css/dcc_cleric_spell_list.css">
+	
+</head>
+<body>
+	
+
+	
+   
+  
+  <img id="character_sheet"/>
+	<section>
+	<img src="images/spells_general/cleric_spell_title_4.png" id="title"/>
+		
+        <div id = "spell">
+            <img src="images/spells_general/spell_level01.png"/><br/>
+            <img id="spell1"/><br/>
+            <img id="manifest1" /><br/>
+            <img id="spell2"/><br/>
+            <img id="manifest2" /><br/>
+            <img id="spell3"/><br/>
+            <img id="manifest3" /><br/>
+            <img id="spell4"/><br/>
+            <img id="manifest4" /><br/>
+            <img id="spell5"/><br/>
+            <img id="manifest5" /><br/>
+            <img id="spell6"/><br/>
+            <img id="manifest6" /><br/>
+            
+            
+            <img src="images/spells_general/spell_level02.png"/><br/>
+            <img id="spell2_1"/><br/>
+            <img id="manifest2_1" /><br/>
+            <img id="spell2_2"/><br/>
+            <img id="manifest2_2" /><br/>
+            <img id="spell2_3"/><br/>
+            <img id="manifest2_3" /><br/>
+            <img id="spell2_4"/><br/>
+            <img id="manifest2_4" /><br/>
+                    
+            
+        </div>
+</section>
+	
+
+		
+  <script>
+      
+/*Level 1 Spells
+*/
+const LAST_SPELL = "910";
+ function fetchASpell (index) {
+
+	 if(index < 0) index = 0;
+	 if(index > 10) index = 10;
+	 
+	 var levelOneSpells = [
+		 "images/spells_level1/cleric_level1_00.png",
+		 "images/spells_level1/cleric_level1_01.png",
+		 "images/spells_level1/cleric_level1_02.png",
+		 "images/spells_level1/cleric_level1_03.png",
+		 "images/spells_level1/cleric_level1_04.png",
+		 "images/spells_level1/cleric_level1_05.png",
+		 "images/spells_level1/cleric_level1_06.png",
+		 "images/spells_level1/cleric_level1_07.png",
+		 "images/spells_level1/cleric_level1_08.png",
+		 "images/spells_level1/cleric_level1_09.png",
+		 "images/spells_level1/cleric_level1_910.png"
+	 ];
+
+return levelOneSpells[index]; 
+ }
+
+      
+/*Level 2 Spells
+*/      
+      const LAST_SPELL2 = "910";
+    function fetchASpell2 (index) {
+
+	 if(index < 0) index = 0;
+	 if(index > 10) index = 10;
+	 
+	 var levelTwoSpells = [
+		 "images/spells_level2/cleric_level2_00.png",
+		 "images/spells_level2/cleric_level2_01.png",
+		 "images/spells_level2/cleric_level2_02.png",
+		 "images/spells_level2/cleric_level2_03.png",
+		 "images/spells_level2/cleric_level2_04.png",
+		 "images/spells_level2/cleric_level2_05.png",
+		 "images/spells_level2/cleric_level2_06.png",
+		 "images/spells_level2/cleric_level2_07.png",
+		 "images/spells_level2/cleric_level2_08.png",
+		 "images/spells_level2/cleric_level2_09.png",
+		 "images/spells_level2/cleric_level2_910.png"
+	 ];
+
+return levelTwoSpells[index]; 
+ }
+
+      /*Level 3 Spells
+     
+      const LAST_SPELL3 = "06";
+    function fetchASpell3 (index) {
+
+	 if(index < 0) index = 0;
+	 if(index > 7) index = 7;
+	 
+	 var levelThreeSpells = [
+		 "images/spells_level3/cleric_level3_00.png",
+		 "images/spells_level3/cleric_level3_01.png",
+		 "images/spells_level3/cleric_level3_02.png",
+		 "images/spells_level3/cleric_level3_03.png",
+		 "images/spells_level3/cleric_level3_04.png",
+		 "images/spells_level3/cleric_level3_05.png",
+		 "images/spells_level3/cleric_level3_06.png"
+	 ];
+
+return levelThreeSpells[index]; 
+ }*/ 
+
+	  /*
+	  Level 1 Spells
+	  */
+function get4SpellIndexes(){
+	var indexes = [];
+	while(indexes.length < 6){
+		var newIndex = Math.floor(Math.random() * 11);
+		if(newIndex == 10){
+			newIndex = LAST_SPELL;
+		}
+		if(!indexes.includes(newIndex)){
+			indexes.push(newIndex) ;
+		}
+	}
+	indexes.sort();
+	return indexes;
+}
+	  /*
+      Level 1 Spells
+	  */
+	  function fetchManifest(index){
+		  if(index === 0) {
+			  var spell = ["images/spells_level1/cleric_level_1_manifest_0.png",
+							  "images/spells_level1/cleric_level_1_manifest_1.png",
+							  "images/spells_level1/cleric_level_1_manifest_2.png",
+							  "images/spells_level1/cleric_level_1_manifest_3.png"
+							 ];
+			  return spell[Math.floor(Math.random() * 4)];
+		  }
+		  if(index === 1) {
+	  		var spell = ["images/spells_level1/cleric_level_1_manifest_4.png",
+					  "images/spells_level1/cleric_level_1_manifest_5.png",
+					  "images/spells_level1/cleric_level_1_manifest_6.png"
+					 ];
+			 return spell[Math.floor(Math.random() * 3)];
+		  }
+		  if(index === 2) {
+	  		var spell = ["images/spells_level1/cleric_level_1_manifest_7.png",
+					  "images/spells_level1/cleric_level_1_manifest_8.png",
+					  "images/spells_level1/cleric_level_1_manifest_9.png"
+					 ];
+			 return spell[Math.floor(Math.random() * 3)];
+		  }		  
+		  if(index === 3) {
+			 return  "images/spells_level1/cleric_level_1_manifest_10.png";
+		  }	
+		  if(index === 4) {
+			  var spell = ["images/spells_level1/cleric_level_1_manifest_11.png",
+							  "images/spells_level1/cleric_level_1_manifest_12.png",
+							  "images/spells_level1/cleric_level_1_manifest_13.png",
+							  "images/spells_level1/cleric_level_1_manifest_14.png"
+							 ];
+			  return spell[Math.floor(Math.random() * 4)];
+		  }		  
+		  if(index === 5) {
+			  var spell = ["images/spells_level1/cleric_level_1_manifest_15.png",
+							  "images/spells_level1/cleric_level_1_manifest_16.png",
+							  "images/spells_level1/cleric_level_1_manifest_17.png",
+							  "images/spells_level1/cleric_level_1_manifest_18.png"
+							 ];
+			  return spell[Math.floor(Math.random() * 4)];
+		  }		  
+		  if(index === 6) {
+			  var spell = ["images/spells_level1/cleric_level_1_manifest_19.png",
+							  "images/spells_level1/cleric_level_1_manifest_20.png",
+							  "images/spells_level1/cleric_level_1_manifest_21.png",
+							  "images/spells_level1/cleric_level_1_manifest_22.png"
+							 ];
+			  return spell[Math.floor(Math.random() * 4)];
+		  }		  
+		  if(index === 7) {
+	  		var spell = ["images/spells_level1/cleric_level_1_manifest_23.png",
+					  "images/spells_level1/cleric_level_1_manifest_24.png",
+					  "images/spells_level1/cleric_level_1_manifest_25.png"
+					 ];
+			 return spell[Math.floor(Math.random() * 3)];
+		  }			  			  		  
+		  if(index === 8) {
+	  		var spell = ["images/spells_level1/cleric_level_1_manifest_26.png",
+					  "images/spells_level1/cleric_level_1_manifest_27.png",
+					  "images/spells_level1/cleric_level_1_manifest_28.png"
+					 ];
+			 return spell[Math.floor(Math.random() * 3)];
+		  }				  
+		  if(index === 9) {
+	  		var spell = ["images/spells_level1/cleric_level_1_manifest_29.png",
+					  "images/spells_level1/cleric_level_1_manifest_30.png",
+					  "images/spells_level1/cleric_level_1_manifest_31.png"
+					 ];
+			 return spell[Math.floor(Math.random() * 3)];
+		  }	
+		  if(index == LAST_SPELL) {
+			  var spell = ["images/spells_level1/cleric_level_1_manifest_32.png",
+							  "images/spells_level1/cleric_level_1_manifest_33.png",
+							  "images/spells_level1/cleric_level_1_manifest_34.png",
+							  "images/spells_level1/cleric_level_1_manifest_35.png"
+							 ];
+			  return spell[Math.floor(Math.random() * 4)];
+		  }			  
+		  return "images/spells_level1/cleric_level_1_manifest_35.png";
+	  }
+	  
+	  
+        var imgData = "images/dcc_cleric_spells0.png";
+        document.getElementById("character_sheet").src = imgData;
+	  
+
+	 var indexOfImages = get4SpellIndexes();
+		 for(i=1; i< 7; i++){
+		 	document.getElementById("spell" + i).src = fetchASpell(indexOfImages[i-1]);
+		 	document.getElementById("manifest" + i).src = fetchManifest(indexOfImages[i-1]);
+		 }
+		
+
+      	  /*
+	  Level 2 Spells
+	  */
+function get4SpellIndexes2(){
+	var indexes = [];
+	while(indexes.length < 4){
+		var newIndex = Math.floor(Math.random() * 11);
+		if(newIndex == 10){
+			newIndex = LAST_SPELL2;
+		}
+		if(!indexes.includes(newIndex)){
+			indexes.push(newIndex) ;
+		}
+	}
+	indexes.sort();
+	return indexes;
+}
+      
+      	  /*
+          Level 2 Spells
+	  */
+	  function fetchManifest2(index){
+		  if(index === 0) {
+			  var spell = ["images/spells_level2/cleric_level_2_manifest_0.png",
+							  "images/spells_level2/cleric_level_2_manifest_1.png",
+							  "images/spells_level2/cleric_level_2_manifest_2.png",
+							  "images/spells_level2/cleric_level_2_manifest_3.png"
+							 ];
+			  return spell[Math.floor(Math.random() * 4)];
+		  }
+		  if(index === 1) {
+	  		var spell = ["images/spells_level2/cleric_level_2_manifest_4.png",
+					  "images/spells_level2/cleric_level_2_manifest_5.png",
+					  "images/spells_level2/cleric_level_2_manifest_6.png"
+					 ];
+			 return spell[Math.floor(Math.random() * 3)];
+		  }
+		  if(index === 2) {
+	  		var spell = ["images/spells_level2/cleric_level_2_manifest_7.png",
+					  "images/spells_level2/cleric_level_2_manifest_8.png",
+					  "images/spells_level2/cleric_level_2_manifest_9.png"
+					 ];
+			 return spell[Math.floor(Math.random() * 3)];
+		  }		  
+		  if(index === 3) {
+			 return  "images/spells_level2/cleric_level_2_manifest_10.png";
+		  }	
+		  if(index === 4) {
+			 return  "images/spells_level2/cleric_level_2_manifest_11.png";
+		  }		  
+		  if(index === 5) {
+			 return  "images/spells_level2/cleric_level_2_manifest_12.png";
+		  }		  
+		  if(index === 6) {
+			  var spell = ["images/spells_level2/cleric_level_2_manifest_13.png",
+							  "images/spells_level2/cleric_level_2_manifest_14.png",
+							  "images/spells_level2/cleric_level_2_manifest_15.png",
+							  "images/spells_level2/cleric_level_2_manifest_16.png"
+							 ];
+			  return spell[Math.floor(Math.random() * 4)];
+		  }		  
+		  if(index === 7) {
+	  		var spell = ["images/spells_level2/cleric_level_2_manifest_17.png",
+					  "images/spells_level2/cleric_level_2_manifest_18.png",
+					  "images/spells_level2/cleric_level_2_manifest_19.png"
+					 ];
+			 return spell[Math.floor(Math.random() * 3)];
+		  }			  			  		  
+		  if(index === 8) {
+	  		var spell = ["images/spells_level2/cleric_level_2_manifest_20.png",
+					  "images/spells_level2/cleric_level_2_manifest_21.png",
+					  "images/spells_level2/cleric_level_2_manifest_22.png",
+					  "images/spells_level2/cleric_level_2_manifest_23.png"
+					 ];
+			 return spell[Math.floor(Math.random() * 4)];
+		  }				  
+		  if(index === 9) {
+			 return  "images/spells_level2/cleric_level_2_manifest_24.png";
+		  }	
+		  if(index == LAST_SPELL2) {
+			  var spell = ["images/spells_level2/cleric_level_2_manifest_25.png",
+							  "images/spells_level2/cleric_level_2_manifest_26.png",
+							  "images/spells_level2/cleric_level_2_manifest_27.png",
+							  "images/spells_level2/cleric_level_2_manifest_28.png"
+							 ];
+			  return spell[Math.floor(Math.random() * 4)];
+		  }			  
+		  return "images/spells_level2/cleric_level_2_manifest_28.png";
+	  }
+	  
+	  
+     //   var imgData = "images/dcc_cleric_spells.png";
+        document.getElementById("character_sheet").src = imgData;
+	  
+
+	 var indexOfImages = get4SpellIndexes2();
+		 for(i=1; i< 5; i++){
+		 	document.getElementById("spell2_" + i).src = fetchASpell2(indexOfImages[i-1]);
+		 	document.getElementById("manifest2_" + i).src = fetchManifest2(indexOfImages[i-1]);
+		 }
+		
+    
+
+      
+      
+  </script>
+		
+	
+    
+</body>
+</html>
